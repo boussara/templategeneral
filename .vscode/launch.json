@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BootstrapApp<spring-thymeleaf-template-integration>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "net.crunchdroid.BootstrapApp",
+            "projectName": "spring-thymeleaf-template-integration",
+            "args": ""
+        }
+    ]
+}
