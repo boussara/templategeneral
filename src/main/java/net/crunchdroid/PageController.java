@@ -16,6 +16,11 @@ public class PageController {
         return "login";
     }
 
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
+
     @GetMapping("/plain-page")
     public String plainPage() {
         return "plain-page";
