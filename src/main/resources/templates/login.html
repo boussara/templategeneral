@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Page de login</title>
+	<title th:text="#{user.title}">title</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -33,35 +33,35 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
-					<span class="login100-form-title-1">
+					<span class="login100-form-title-1" th:text="#{user.login}">
 						Se connecter
 					</span>
 				</div>
 
 				<form class="login100-form validate-form">
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Nom d'utilisateur est nécessaire">
-						<span class="label-input100">Nom d'utilisateur</span>
-						<input class="input100" type="text" name="username" placeholder="Saisissez votre nom d'utilisateur">
+					<div class="wrap-input100 validate-input m-b-26" th:attr="data-validate=#{user.error_nom}">
+						<span class="label-input100" th:text="#{user.user}">Nom d'utilisateur</span>
+						<input class="input100" type="text" name="username" th:attr="placeholder=#{user.placeholder_nom}">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-18" data-validate = "Mot de passe est nécessaire">
-						<span class="label-input100">Mot de passe</span>
-						<input class="input100" type="password" name="pass" placeholder="Saisissez votre mot de passe">
+					<div class="wrap-input100 validate-input m-b-18" th:attr="data-validate=#{user.error_motdepass}">
+						<span class="label-input100" th:text="#{user.passeword}">Mot de passe</span>
+						<input class="input100" type="password" name="pass" th:attr="placeholder=#{user.holder_motdepasse}">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="flex-sb-m w-full p-b-30">
 						<div>
-							<a href="#" class="txt1">
+							<a href="#" class="txt1" th:text="#{user.forget_pass}">
                                 Mot de passe oublié?
 							</a>
 						</div>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
+						<button class="login100-form-btn" th:text="#{user.login}" >
+							Se connecter
 						</button>
 					</div>
 				</form>
